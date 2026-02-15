@@ -1,5 +1,6 @@
 # Core
-torch>=2.1.0
+# NOTE: torch is NOT listed here — NVIDIA servers have a pre-installed build.
+# Only install manually if not present: pip install torch torchvision
 numpy>=1.24.0
 pandas>=2.0.0
 scipy>=1.11.0
