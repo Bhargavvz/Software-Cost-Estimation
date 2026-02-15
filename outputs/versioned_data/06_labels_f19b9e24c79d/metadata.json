@@ -1,0 +1,29 @@
+{
+  "stage": "06_labels",
+  "hash": "f19b9e24c79d",
+  "timestamp": "2026-02-16T02:06:25.828324",
+  "n_records": 200,
+  "n_features": 20,
+  "columns": [
+    "project_id",
+    "sprint_id",
+    "team_size",
+    "sprint_duration_days",
+    "planned_story_points",
+    "completed_story_points",
+    "velocity",
+    "num_stories",
+    "avg_story_complexity",
+    "defect_count",
+    "scope_change_ratio",
+    "team_experience_months",
+    "tech_debt_hours",
+    "meeting_overhead_hours",
+    "effort_hours",
+    "cost_usd",
+    "data_source",
+    "quality_score",
+    "label_confidence",
+    "sample_weight"
+  ]
+}
