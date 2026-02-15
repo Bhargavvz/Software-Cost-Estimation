@@ -246,8 +246,8 @@ class H200Trainer:
                           enabled=self.use_amp):
                 preds = self.model(seqs, lengths)
 
-            all_preds.append(preds.cpu().numpy())
-            all_targets.append(targets.numpy())
+            all_preds.append(preds.float().cpu().numpy())
+            all_targets.append(targets.float().numpy())
 
         return (np.concatenate(all_preds),
                 np.concatenate(all_targets))
