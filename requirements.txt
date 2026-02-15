@@ -12,9 +12,8 @@ xgboost>=2.0.0
 # Data Quality
 filterpy>=1.4.5          # Kalman filtering
 
-# Explainability
-shap>=0.43.0
-captum>=0.7.0
+# Explainability (install separately: pip install --no-deps shap)
+# shap and captum have torch deps that conflict with NVIDIA pre-built torch
 
 # Visualization
 matplotlib>=3.7.0
