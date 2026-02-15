@@ -210,24 +210,34 @@ def create_dataloaders(train_df: pd.DataFrame,
                        max_seq_len: int = 200) \
         -> Tuple[DataLoader, DataLoader, DataLoader]:
     """Create train / val / test DataLoaders."""
-    bs = batch_size or hw.batch_size
-
     train_ds = SprintDataset(train_df, feature_cols, target_col, max_seq_len)
     val_ds = SprintDataset(val_df, feature_cols, target_col, max_seq_len)
     test_ds = SprintDataset(test_df, feature_cols, target_col, max_seq_len)
 
+    # Cap batch size so we never exceed dataset size
+    bs = batch_size or hw.batch_size
+    bs = min(bs, len(train_ds))
+
+    # Auto-detect: disable multiprocessing workers on CPU / Windows
+    import platform
+    use_workers = hw.num_workers if torch.cuda.is_available() else 0
+    use_pin = hw.pin_memory and torch.cuda.is_available()
+
+    # Only drop_last if dataset is significantly larger than batch
+    drop_last = len(train_ds) > bs * 2
+
     train_loader = DataLoader(train_ds, batch_size=bs, shuffle=True,
                               collate_fn=collate_sprints,
-                              num_workers=hw.num_workers,
-                              pin_memory=hw.pin_memory, drop_last=True)
+                              num_workers=use_workers,
+                              pin_memory=use_pin, drop_last=drop_last)
     val_loader = DataLoader(val_ds, batch_size=bs, shuffle=False,
                             collate_fn=collate_sprints,
-                            num_workers=hw.num_workers,
-                            pin_memory=hw.pin_memory)
+                            num_workers=use_workers,
+                            pin_memory=use_pin)
     test_loader = DataLoader(test_ds, batch_size=bs, shuffle=False,
                              collate_fn=collate_sprints,
-                             num_workers=hw.num_workers,
-                             pin_memory=hw.pin_memory)
+                             num_workers=use_workers,
+                             pin_memory=use_pin)
 
     logger.info(f"DataLoaders: train={len(train_ds)}, val={len(val_ds)}, "
                 f"test={len(test_ds)}, batch_size={bs}")

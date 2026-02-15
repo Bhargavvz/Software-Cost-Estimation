@@ -140,13 +140,15 @@ def stage_train_deep_model(model_name, ModelClass, train_df, val_df,
     train_cfg = type(hw)()
     train_cfg.device = args.device
     train_cfg.max_epochs = args.epochs
-    train_cfg.batch_size = min(hw.batch_size, max(4, len(train_df) // 10))
+    # Batch size should be relative to project count, not row count
+    n_train_projects = train_df["project_id"].nunique()
+    train_cfg.batch_size = min(hw.batch_size, max(4, n_train_projects // 4))
     if args.device == "cpu":
         train_cfg.precision = "fp32"
         train_cfg.compile_model = False
         train_cfg.num_workers = 0
 
-    # Create data loaders
+    # Create data loaders (batch_size will be further capped in create_dataloaders)
     train_loader, val_loader, test_loader = create_dataloaders(
         train_df, val_df, test_df, feature_cols,
         batch_size=train_cfg.batch_size,
