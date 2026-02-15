@@ -1,0 +1,9 @@
+{
+  "stage": "temporal_smoothing",
+  "records_before": 12810,
+  "records_after": 12810,
+  "actions": [
+    "Kalman-smoothed columns: ['velocity', 'effort_hours', 'completed_story_points']"
+  ],
+  "stats": {}
+}

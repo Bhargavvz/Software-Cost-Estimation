@@ -1,0 +1,27 @@
+{
+  "stage": "03_consistency",
+  "hash": "5b804b4f9491",
+  "timestamp": "2026-02-15T20:59:37.961506",
+  "n_records": 1209,
+  "n_features": 18,
+  "columns": [
+    "project_id",
+    "sprint_id",
+    "team_size",
+    "sprint_duration_days",
+    "planned_story_points",
+    "completed_story_points",
+    "velocity",
+    "num_stories",
+    "avg_story_complexity",
+    "defect_count",
+    "scope_change_ratio",
+    "team_experience_months",
+    "tech_debt_hours",
+    "meeting_overhead_hours",
+    "effort_hours",
+    "cost_usd",
+    "data_source",
+    "quality_score"
+  ]
+}

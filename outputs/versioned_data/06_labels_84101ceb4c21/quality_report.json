@@ -1,0 +1,11 @@
+{
+  "stage": "label_quality",
+  "records_before": 12810,
+  "records_after": 12810,
+  "actions": [
+    "Label anomalies smoothed: 76"
+  ],
+  "stats": {
+    "labels_smoothed": 76
+  }
+}

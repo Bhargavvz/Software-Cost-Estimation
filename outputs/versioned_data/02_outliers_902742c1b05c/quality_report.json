@@ -1,0 +1,16 @@
+{
+  "stage": "outlier_detection",
+  "records_before": 12810,
+  "records_after": 12810,
+  "actions": [
+    "IQR outliers: 3577",
+    "Isolation Forest outliers: 641",
+    "Temporal anomalies: 0",
+    "Total flagged (down-weighted): 3585",
+    "Applied winsorization at 1st/99th percentile"
+  ],
+  "stats": {
+    "n_outliers": 3585,
+    "outlier_pct": 0.27985948477751754
+  }
+}

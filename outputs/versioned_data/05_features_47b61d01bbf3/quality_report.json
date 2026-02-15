@@ -1,0 +1,41 @@
+{
+  "stage": "feature_validation",
+  "records_before": 1209,
+  "records_after": 1209,
+  "actions": [
+    "Removed high-correlation features: []",
+    "Low mutual-info features: ['tech_debt_hours']"
+  ],
+  "stats": {
+    "mutual_info_scores": {
+      "team_size": 0.0494,
+      "sprint_duration_days": 0.0179,
+      "planned_story_points": 0.5869,
+      "completed_story_points": 0.7262,
+      "velocity": 0.4758,
+      "num_stories": 0.2748,
+      "avg_story_complexity": 0.0578,
+      "defect_count": 0.2374,
+      "scope_change_ratio": 0.015,
+      "team_experience_months": 0.1305,
+      "tech_debt_hours": 0.0011,
+      "meeting_overhead_hours": 0.0104
+    },
+    "selected_features": [
+      "team_size",
+      "sprint_duration_days",
+      "planned_story_points",
+      "completed_story_points",
+      "velocity",
+      "num_stories",
+      "avg_story_complexity",
+      "defect_count",
+      "scope_change_ratio",
+      "team_experience_months",
+      "meeting_overhead_hours"
+    ],
+    "removed_features": [
+      "tech_debt_hours"
+    ]
+  }
+}

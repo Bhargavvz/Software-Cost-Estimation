@@ -1,0 +1,41 @@
+{
+  "stage": "missing_data",
+  "records_before": 50203,
+  "records_after": 50203,
+  "actions": [],
+  "stats": {
+    "missingness": {
+      "team_size": 0.0,
+      "sprint_duration_days": 0.0,
+      "planned_story_points": 0.0,
+      "completed_story_points": 0.0,
+      "velocity": 0.0,
+      "num_stories": 0.0,
+      "avg_story_complexity": 0.0,
+      "defect_count": 0.0,
+      "scope_change_ratio": 0.0,
+      "team_experience_months": 0.0,
+      "tech_debt_hours": 0.0,
+      "meeting_overhead_hours": 0.0,
+      "effort_hours": 0.0,
+      "cost_usd": 0.0
+    },
+    "reliability": {
+      "team_size": 1.0,
+      "sprint_duration_days": 1.0,
+      "planned_story_points": 1.0,
+      "completed_story_points": 1.0,
+      "velocity": 1.0,
+      "num_stories": 1.0,
+      "avg_story_complexity": 1.0,
+      "defect_count": 1.0,
+      "scope_change_ratio": 1.0,
+      "team_experience_months": 1.0,
+      "tech_debt_hours": 1.0,
+      "meeting_overhead_hours": 1.0,
+      "effort_hours": 1.0,
+      "cost_usd": 1.0
+    },
+    "dropped_features": []
+  }
+}

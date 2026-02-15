@@ -1,0 +1,27 @@
+{
+  "stage": "01_imputed",
+  "hash": "31d800b8047f",
+  "timestamp": "2026-02-15T21:09:11.720969",
+  "n_records": 50203,
+  "n_features": 18,
+  "columns": [
+    "project_id",
+    "sprint_id",
+    "team_size",
+    "sprint_duration_days",
+    "planned_story_points",
+    "completed_story_points",
+    "velocity",
+    "num_stories",
+    "avg_story_complexity",
+    "defect_count",
+    "scope_change_ratio",
+    "team_experience_months",
+    "tech_debt_hours",
+    "meeting_overhead_hours",
+    "effort_hours",
+    "cost_usd",
+    "data_source",
+    "quality_score"
+  ]
+}

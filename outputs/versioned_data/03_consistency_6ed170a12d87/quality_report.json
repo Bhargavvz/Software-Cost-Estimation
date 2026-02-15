@@ -1,0 +1,11 @@
+{
+  "stage": "agile_consistency",
+  "records_before": 12810,
+  "records_after": 12810,
+  "actions": [
+    "Total consistency violations fixed: 1158"
+  ],
+  "stats": {
+    "violations_fixed": 1158
+  }
+}
